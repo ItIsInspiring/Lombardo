@@ -25,6 +25,6 @@
     }
   },
   "config": {
-    "devUrl": "http://albertolombardo.dev"
+    "devUrl": "http://albertolombardo.dev/"
   }
 }

@@ -1,11 +1,19 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
+<div class="section-deco"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco.svg"></div>
 <section id="about" class="section-content">
     <div class="row">
-        <h2 id="#about" class="title center text-center">À propos</h2>
+        <h2 id="#about" class="title center text-center">
+        <span>
+        <?php
+        $post_6 = get_post( 6 ); 
+        $title = $post_6->post_title;
+        echo $title;    
+        ?>
+        </span>
+        </h2>
         <div class="large-12 columns">
             <p class="chapeau">Son théâtre est un théâtre du dire. Le dire comme une urgence, un acte, une revendication physique. Il écrit des pièces sur les relations humaines, amoureuses, familiales, sur l'identité, la transformation, l’engagement, le désir, le sexe et la spiritualité.</p>
-            
         </div>
         
         <div class="row">
@@ -31,13 +39,21 @@
     </div>
 </section>
 
-<div id="deco1" class="section-deco" >
-    
+<div class="section-deco">
+    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco1.svg"/>    
 </div>
 
 <section id="news" class="section-content">
     <div class="row">
-        <h2 id="events" class="title text-center">Actualités</h2>
+        <h2 id="events" class="title text-center">
+        <span>
+        <?php
+        $post_16 = get_post(16); 
+        $title = $post_16->post_title;
+        echo $title;    
+        ?>
+        </span>
+        </h2>
         <div class="medium-6 large-6 columns">
             <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('home-events') ) ?>
         </div>
@@ -48,13 +64,21 @@
     </div>
 </section>
 
-<div id="deco2" class="section-deco" >
-    
+<div class="section-deco" >
+    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco2.svg"/>    
 </div>
 
 <section id="gallery" class="section-content">
     <div class="row">
-        <h2 id="gallery" class="title text-center">Galerie</h2>
+        <h2 id="gallery" class="title text-center">
+        <span>
+        <?php
+        $post_14 = get_post( 14 ); 
+        $title = $post_14->post_title;
+        echo $title;    
+        ?> 
+        </span>
+        </h2>
         <div class="large-12 columns">
             <?php 
                 $terms = get_terms("Compétences"); 
@@ -137,13 +161,21 @@
     </div>
 </section>
 
-<div id="deco3" class="section-deco" >
-    
+<div class="section-deco" >
+    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco3.svg"/>    
 </div>
 
 <section id="contact" class="section-content">
     <div class="row ">
-        <h2 id="contact" class="title text-center">Contact</h2>
+        <h2 id="contact" class="title text-center">
+        <span>
+        <?php
+        $post_8 = get_post( 8 ); 
+        $title = $post_8->post_title;
+        echo $title;    
+        ?>
+        </span>
+        </h2>
         <div class="medium-6 medium-centered large-6 large-centered columns">
             <?php 
                 $page_id = 8; 
@@ -156,5 +188,6 @@
         </div>
     </div>
 </section>
+<div class="section-deco"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco.svg"></div>
 
 <?php get_template_part('templates/page', 'footer'); ?>

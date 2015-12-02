@@ -3,7 +3,7 @@
         <h1>Alberto Lombardo</h1>
         <p>Auteur | Comédien | Animateur</p>
         
-        <a href="#about">Cliquez pour descendre</a>
+        <a href="#about" class="scroll-bas">Cliquez pour descendre</a>
     </div>  
 </section>
 

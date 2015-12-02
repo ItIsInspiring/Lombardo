@@ -1,0 +1,40 @@
+//90803a
+//a, .btn{ @include button; }
+
+@mixin base-btn-ghost{
+    background: transparent;
+    border: 2px solid $ocre-fonce;
+    color: $ocre-fonce;
+    margin: 1em;
+    padding: 0.5em 1em;  
+    transition: background 0.25s;
+    
+    &:hover{
+        background: $ocre-fonce;
+        color: #fff;
+    }
+}
+
+.btn-g-small,
+.btn-g-medium,
+.btn-g-large{
+    @include base-btn-ghost;
+}
+
+
+.btn-small{}
+.btn-medium{}
+.btn-large{}
+
+
+.scroll-bas{
+    text-align: center;
+    transition: all 0.25s ease;
+    border:0px solid red;  
+    
+    &:hover{
+        transform: scale(2);
+    }
+
+}
+

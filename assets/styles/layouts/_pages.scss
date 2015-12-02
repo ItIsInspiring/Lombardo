@@ -2,52 +2,29 @@
 /* HOMEPAGE */
 /************/
 
-/* centrer le logo */
-.title-area{
-    width: 100% !important;
-    text-align: center;
-    z-index: 5;
-    border:0px solid green;
-    //float:inherit;
-    .name{
-        border: 0px solid #F00;
-        position: relative;
-        left: 50%;
-        top: 0;
-        margin: 0 -400px;
-        width: 800px;
-    }
-}
-.main-menu{
- text-align: center;
-}
-#menu_principal{
-    display: inline-block;
-    position: relative;
-    z-index:10;
-    top:-3em;
-    border:0px solid red;
-    width: 600px;
-    background-color: transparent;
-    
-    li{background-color: transparent;}
-    
-    li:nth-child(2){
-        padding-right:200px;
-    }
-}
-
-.section-content{
+/* LES BLOCS PRINCIPAUX */
+.bg-bloc{
     background-color: $gris-jaune;
-    &:before,
-    &:after,
-    {
-        background-image: url("../images/demi-lozange-svg");  
+    outline: 1px solid $gris-jaune;
+    @media #{$small-only}{
+        padding: 0 1em;
+    }
+}
+.section-content{  
+    background-color: $gris-jaune;
+    outline: 2px solid #F2EFE6;
+}
+.section-content-haut,
+.section-content-bas{
+    width:100%;
+    border: 0px solid red;
+    text-align: center;   
+    img{
         width: 100%;
         height: auto;
-        border:1px solid red;
     }
 }
+.section-content-bas{ transform: rotate(180deg); }
 
 
 #intro{
@@ -63,11 +40,6 @@
     margin: 0 auto;
 }
 
-.section-deco{
-    width:100vw;
-    height: 100vh;
-}
-
 #intro{
     display: table;
     width:100%;
@@ -80,17 +52,64 @@
 }
 
 
+/************/
+/* A PROPOS */
+/************/
+.section-skills{
+    margin: 4em auto 8em;
+}
+.list_skills{
+    text-align: center;
+    margin:0 auto !important;
+    width: 50% !important;
+    li:nth-child(1) { background-image: url("../images/lozange_marron.svg"); }
+    li:nth-child(2) { background-image: url("../images/lozange_rouge.svg"); }
+    li:nth-child(3) { background-image: url("../images/lozange_ocre_fonce.svg"); }
+    
+
+    
+    .list_skills_skill{
+        text-align: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 200px;
+        color:#fff;
+        border: 0px solid red;
+        display: table;
+        
+        a{
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+            color:#fff;
+            font-size: 1.25rem;
+            font-weight: bold;
+            font-family: "caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif;
+            
+            span{
+                clear: both;
+                font-family:"Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
 
 
-#deco1{
+
+
+/*******************************/
+/*** ELEMENTS INTERMEDIAIRES ***/
+/* POUR LA DECO ENTRE LES BLOCS*/
+/*******************************/
+.section-deco{
+    width:100%;
     background: #fff url("../images/gravure_1@1X.gif") no-repeat;
     background-position: center;
-}
-#deco2{
-    background: #fffurl("../images/gravure_1@1X.gif") no-repeat;
-    background-position: center;
-}
-#deco3{    
-    background: #fff url("../images/gravure_1@1X.gif") no-repeat;
-    background-position: center;
+    
+    img{
+        width:100%;
+        height: auto
+    }
 }

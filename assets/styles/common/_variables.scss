@@ -2,6 +2,19 @@
 // Glyphicons font path
 $icon-font-path:        "../fonts/";
 
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+//
+$ocre-claire    :#ccb852;
+$ocre-fonce     :#90803a;
+$gris-jaune	    :#f2efe6;
+$rouge		    :#b90000;
+$bordeaux	    :#641919;
+$noir 		    :#330d0d;
+
+//titrages
 @font-face {
     font-family: 'bodonixtregular';
     src: url('../fonts/BodoniXT-webfont.eot');
@@ -13,8 +26,6 @@ $icon-font-path:        "../fonts/";
     font-style: normal;
 
 }
-
-
 
 @font-face {
     font-family: 'caviar_dreamsregular';
@@ -28,23 +39,37 @@ $icon-font-path:        "../fonts/";
 
 }
 
-$chapeau-font-family:"caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif;
-.chapeau{
-    font-family: $chapeau-font-family;
+//$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-serif: "bodonixtregular", Cambria, Times, serif;
+//$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
+h1,
+h2{ 
+    font-family:$font-family-serif;
+    letter-spacing: 0.05rem;
 }
 
-// Grid settings
-$main-sm-columns:       12;
-$sidebar-sm-columns:    4;
+.font2,
+.chapeau, 
+h3, 
+h4, 
+h5, 
+h6{
+    font-family:"caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif;
+}
 
-// Colors
-$ocre-claire    :#ccb852;
-$ocre-fonce     :#90803a;
-$gris-jaune	    :#f2efe6;
+.section-content .title{
+    margin: 5rem auto 2rem;
+    //text-decoration: underline #90803a;
+    text-transform: uppercase;
+    span{
+        border-bottom: 2px solid $ocre-fonce;
+    }
+}
 
-$rouge		    :#b90000;
-$bordeaux	    :#641919;
-$noir 		    :#330d0d;
 
-$brand-primary:         $ocre-claire;
-
+.chapeau{
+    font-size: 2rem; 
+    margin-bottom: 2.5rem;
+    text-align: center;
+}

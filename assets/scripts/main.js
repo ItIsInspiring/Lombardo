@@ -19,8 +19,23 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
-
+            
         $(document).foundation(); // Foundation JavaScript
+        
+        // SCROLL ANIME
+        $('a[href^="#"]').click(function(){
+            var the_id = $(this).attr("href");
+
+            $('html, body').animate({
+                scrollTop:$(the_id).offset().top
+            },
+                500,
+                'easeOutExpo'
+            );
+            
+            return false;
+        });
+  
 
       },
       finalize: function() {

@@ -1,4 +1,5 @@
 @import "common/_variables";
+@import "common/_settings";
 
 // Foundation variables goes here, before including foundation framework
 // $body-bg: pink;
@@ -18,6 +19,7 @@
 @import "components/_forms";
 @import "components/_grid";
 @import "components/_wp-classes";
+@import "components/_galerie";
 @import "layouts/_header";
 @import "layouts/_sidebar";
 @import "layouts/_footer";
