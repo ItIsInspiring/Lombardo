@@ -62,13 +62,12 @@
     text-align: center;
     margin:0 auto !important;
     width: 50% !important;
+    
     li:nth-child(1) { background-image: url("../images/lozange_marron.svg"); }
     li:nth-child(2) { background-image: url("../images/lozange_rouge.svg"); }
-    li:nth-child(3) { background-image: url("../images/lozange_ocre_fonce.svg"); }
+    li:nth-child(3) { background-image: url("../images/lozange_ocre_fonce.svg");} 
     
-
-    
-    .list_skills_skill{
+    li{
         text-align: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -113,3 +112,4 @@
         height: auto
     }
 }
+

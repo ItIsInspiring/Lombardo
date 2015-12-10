@@ -26,14 +26,13 @@
         </div>
         <!-- fin de row -->
         
-        <div class="row">
-            <h3 class="text-center">Alberto est à la fois...</h3>
-            <ul class="li_skills inline-list ">
-                <li><a href="/a-propos/auteur/">Auteur</a></li>
-                <li><a href="/a-propos/comedien/">Comédien</a></li>
-                <li><a href="/a-propos/animateur/">Animateur</a></li>
-            </ul>
-        </div>
+        <h3 class="text-center">Alberto est à la fois...</h3>
+            
+        <ul class="list_skills row">
+            <li class="medium-4 columns"><a href="/a-propos/auteur/">Auteur</a></li>
+            <li class="medium-4 columns"><a href="/a-propos/comedien/">Comédien</a></li>
+            <li class="medium-4 columns"><a href="/a-propos/animateur/">Animateur</a></li>
+        </ul>
         <!-- fin de row -->    
         
     </div>
@@ -41,31 +40,6 @@
 
 <div class="section-deco">
     <img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco1.svg"/>    
-</div>
-
-<section id="news" class="section-content">
-    <div class="row">
-        <h2 id="events" class="title text-center">
-        <span>
-        <?php
-        $post_16 = get_post(16); 
-        $title = $post_16->post_title;
-        echo $title;    
-        ?>
-        </span>
-        </h2>
-        <div class="medium-6 large-6 columns">
-            <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('home-events') ) ?>
-        </div>
-        <div class="medium-6 large-6 columns">
-            <p class="chapeau">Alberto recherche une troupe de théâtre pour construire un projet en tant qu’auteur.</p>
-            <p class="chapeau">N’hésitez pas à le <a href="#contact">contacter</a>.</p>
-        </div>
-    </div>
-</section>
-
-<div class="section-deco" >
-    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco2.svg"/>    
 </div>
 
 <section id="gallery" class="section-content">
@@ -118,7 +92,7 @@
     
                         <figure id="post-<?php the_ID(); ?>" 
                         
-                        class="effect-sarah <?php
+                        class="<?php
                         $taxonomy="Compétences";	
                         $terms = get_the_terms( $post->ID, $taxonomy );
                         $mesCat=" " ;
@@ -157,6 +131,32 @@
     
                     <?php endif; ?>
             </div><!-- .grid -->
+        </div>
+    </div>
+</section>
+
+
+<div class="section-deco" >
+    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco2.svg"/>    
+</div>
+
+<section id="news" class="section-content">
+    <div class="row">
+        <h2 id="events" class="title text-center">
+        <span>
+        <?php
+        $post_16 = get_post(16); 
+        $title = $post_16->post_title;
+        echo $title;    
+        ?>
+        </span>
+        </h2>
+        <div class="medium-6 large-6 columns">
+            <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('home-events') ) ?>
+        </div>
+        <div class="medium-6 large-6 columns">
+            <p class="chapeau">Alberto recherche une troupe de théâtre pour construire un projet en tant qu’auteur.</p>
+            <p class="chapeau">N’hésitez pas à le <a href="#contact">contacter</a>.</p>
         </div>
     </div>
 </section>
