@@ -29,9 +29,9 @@
         <h3 class="text-center">Alberto est à la fois...</h3>
             
         <ul class="list_skills row">
-            <li class="medium-4 columns"><a href="/a-propos/auteur/">Auteur</a></li>
-            <li class="medium-4 columns"><a href="/a-propos/comedien/">Comédien</a></li>
-            <li class="medium-4 columns"><a href="/a-propos/animateur/">Animateur</a></li>
+            <li class="medium-4 columns"><a href="/a-propos/auteur/" class="lozange">Auteur<span></span></a></li>
+            <li class="medium-4 columns"><a href="/a-propos/comedien/" class="lozange">Comédien<span></span></a></li>
+            <li class="medium-4 columns"><a href="/a-propos/animateur/" class="lozange">Animateur<span></span></a></li>
         </ul>
         <!-- fin de row -->    
         

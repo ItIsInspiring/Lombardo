@@ -63,36 +63,28 @@
     margin:0 auto !important;
     width: 50% !important;
     
-    li:nth-child(1) { background-image: url("../images/lozange_marron.svg"); }
-    li:nth-child(2) { background-image: url("../images/lozange_rouge.svg"); }
-    li:nth-child(3) { background-image: url("../images/lozange_ocre_fonce.svg");} 
     
     li{
         text-align: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 200px;
         color:#fff;
         border: 0px solid red;
         display: table;
         
-        a{
-            display: table-cell;
-            vertical-align: middle;
-            height: 100%;
-            color:#fff;
-            font-size: 1.25rem;
-            font-weight: bold;
-            font-family: "caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif;
-            
-            span{
-                clear: both;
-                font-family:"Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-                font-size: 0.7rem;
-            }
-        }
+        
+    }/* fin de li */
+    
+    /*li:nth-child(1) a{ 
+        background: url("../images/lozange_marron.svg") no-repeat;
     }
+    
+    li:nth-child(2) a{ 
+        background-image: url("../images/btn_lozange_rouge.svg"); 
+    }
+    
+    li:nth-child(3) a{ 
+        background-image: url("../images/btn_lozange_ocre_fonce.svg");
+    } */
+    
 }
 
 
@@ -113,3 +105,23 @@
     }
 }
 
+
+
+.lozange {
+	display: inline-block;
+	position: relative;
+	//text-indent: -9999px;
+	width: 100%;
+	height: 150%;
+	background: url("../images/btn_lozange_marron.svg") no-repeat;
+    text-align: center;
+    color:#fff;
+    border: 0px solid red;
+
+     span {
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        background: url("../images/btn_lozange_marron.svg") no-repeat;
+        background-position:0 -360px ;
+    }
+}
