@@ -70,7 +70,7 @@
             echo "</ul>"; 
         ?>    
             
-        <div class="row grid">
+        <div class="row-galery grid">
 
                 <?php 
                 $args = array(
@@ -84,26 +84,26 @@
 
                 if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                <div id="post-<?php the_ID(); ?>" class="small-2 medium-4 large-6 projet <?php
-                $taxonomy="Compétences";	
-                $terms = get_the_terms( $post->ID, $taxonomy );
-                $mesCat=" " ;
-                if( !empty( $terms ) ) {
-                    foreach( $terms as $order => $term ) {
-                        echo $term->slug;
-                        /*if( !in_array( $term->slug, $classes ) ) {
-                            $classes[] = $term->slug;
-                        }*/
+                <div id="post-<?php the_ID(); ?>" class="projet <?php
+                    $taxonomy="Compétences";	
+                    $terms = get_the_terms( $post->ID, $taxonomy );
+                    $mesCat="" ;
+                    if( !empty( $terms ) ) {
+                        foreach( $terms as $order => $term ) {
+                            echo $term->slug." ";
+                            /*if( !in_array( $term->slug, $classes ) ) {
+                                $classes[] = $term->slug;
+                            }*/
+                        }
                     }
-                }
-                /*return $classes;*/
-                 ?>" role="article">
+                    /*return $classes;*/
+                     ?>" role="article">
                     <a href="<?php the_permalink() ?>" title="Voir le projet : <?php the_title() ?>" >
-                        <div class="projet-legende">   
-                            <h2 class="p-titre"><?php the_title() ?></h2>
+                        <div class="projet_desc">   
+                            <h2 class="projet_titre"><?php the_title() ?></h2>
                         </div>
                     </a>    
-                </div><!-- fin de grid -->
+                </div><!-- fin de projet -->
             <?php endwhile; ?> 
 
             <?php else : ?>

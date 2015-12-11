@@ -45,7 +45,7 @@
             ?>
         </section>    
 
-      <nav>
+    </nav>
 </div>
  
 
