@@ -70,21 +70,13 @@
             echo "</ul>"; 
         ?>    
             
-        <div class="row">
+        <div class="row grid">
 
                 <?php 
                 $args = array(
                   'post_type' => 'Projet',
-                   /*'meta_key' => 'date_de_creation',
-                'orderby' => 'meta_value_num',
-                'order' => 'DESC'
-                  'tax_query' => array(
-                       array(
-                          'taxonomy' => 'cat_dintervention',
-                          'field' => 'slug',
-                          'terms' => $maCatSlug,
-                            )
-                        )*/
+                    'posts_per_page' => -1
+
                     );
 
                 // The Query
@@ -92,46 +84,35 @@
 
                 if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                    <div id="post-<?php the_ID(); ?>" 
-
-                    class="small-2 medium-4 large-6 projet <?php
-                    $taxonomy="Compétences";	
-                    $terms = get_the_terms( $post->ID, $taxonomy );
-                    $mesCat=" " ;
-                    if( !empty( $terms ) ) {
-                        foreach( $terms as $order => $term ) {
-                            echo $term->slug;
-                            /*if( !in_array( $term->slug, $classes ) ) {
-                                $classes[] = $term->slug;
-                            }*/
-                        }
+                <div id="post-<?php the_ID(); ?>" class="small-2 medium-4 large-6 projet <?php
+                $taxonomy="Compétences";	
+                $terms = get_the_terms( $post->ID, $taxonomy );
+                $mesCat=" " ;
+                if( !empty( $terms ) ) {
+                    foreach( $terms as $order => $term ) {
+                        echo $term->slug;
+                        /*if( !in_array( $term->slug, $classes ) ) {
+                            $classes[] = $term->slug;
+                        }*/
                     }
-                    /*return $classes;*/
-                     ?>" role="article">
+                }
+                /*return $classes;*/
+                 ?>" role="article">
+                    <a href="<?php the_permalink() ?>" title="Voir le projet : <?php the_title() ?>" >
+                        <div class="projet-legende">   
+                            <h2 class="p-titre"><?php the_title() ?></h2>
+                        </div>
+                    </a>    
+                </div><!-- fin de grid -->
+            <?php endwhile; ?> 
 
-                            <div class="projet-legende">   
-                                <h2 class="p-titre"><?php the_title() ?></h2>
-                                <a href="<?php the_permalink() ?>" title="Voir le projet : <?php the_title() ?>" >+</a>
-                            </div>
-                            
-                        </div><!-- fin de box -->
-
-
-                <?php endwhile; ?> 
-
-                <?php else : ?>
-
-                    <article id="post-not-found">
-                        <header>
-                            <h1>Il n'y a pas d'intervention pour le moment.</h1>
-                        </header>
-
-                        <section class="post_content">
-                            <p>Merci.</p>
-                        </section>
-                    </article>
-
-                <?php endif; ?>
+            <?php else : ?>
+                <article id="post-not-found">
+                    <header><h1>Il n'y a pas d'intervention pour le moment.</h1></header>
+                    <section class="post_content"><p>Merci.</p></section>
+                </article>
+            <?php endif; ?>
+                
         </div><!-- .grid -->
         
     </div><!--* fin de row -->
