@@ -43,7 +43,6 @@
 .chapeau{
     font-size: 2rem; 
     margin-bottom: 2.5rem;
-    text-align: center;
 }
 
 /*************/ 
@@ -168,3 +167,13 @@
         background-position:0 -360px ;
     }
 }*/
+
+/************/
+/* A VENIR */
+/************/
+.tribe-events-list-widget h3{
+    font-family:"caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif;
+    font-size: rem-calc(30);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}

@@ -14,7 +14,7 @@
         </h2>
         <span class="trait-lozanges"></span>
         <div>
-            <p class="chapeau">Son théâtre est un théâtre du dire. Le dire comme une urgence, un acte, une revendication physique. Il écrit des pièces sur les relations humaines, amoureuses, familiales, sur l'identité, la transformation, l’engagement, le désir, le sexe et la spiritualité.</p>
+            <p class="chapeau text-center">Son théâtre est un théâtre du dire. Le dire comme une urgence, un acte, une revendication physique. Il écrit des pièces sur les relations humaines, amoureuses, familiales, sur l'identité, la transformation, l’engagement, le désir, le sexe et la spiritualité.</p>
         </div>
         
         <div class="row">
@@ -138,7 +138,7 @@
         <div class="medium-6 large-6 columns">
             <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('home-events') ) ?>
         </div>
-        <div class="medium-6 large-6 columns">
+        <div class="medium-6 large-6 columns text-left">
             <p class="chapeau">Alberto recherche une troupe de théâtre pour construire un projet en tant qu’auteur.</p>
             <p class="chapeau">N’hésitez pas à le <a href="#contact">contacter</a>.</p>
         </div>
