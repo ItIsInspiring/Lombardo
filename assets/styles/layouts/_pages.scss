@@ -26,7 +26,29 @@
 }
 .section-content-bas{ transform: rotate(180deg); }
 
+.trait-lozanges{
+    background:transparent url(../images/lozange_ocre_claire.svg) repeat-x;
+    height: 5rem;
+    width: 20rem;
+    margin: 0 auto;
+    border:0px solid red;
+    display: block;
+}
+.section-content .title{
+    margin: 5rem auto 0rem;
+    //text-decoration: underline #90803a;
+    text-transform: uppercase;
+}
 
+.chapeau{
+    font-size: 2rem; 
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+/*************/ 
+/* INTRO LOGO*/
+/*************/ 
 #intro{
     width:100vw;
     height:93vh;
@@ -51,7 +73,6 @@
     width:100%;
 }
 
-
 /************/
 /* A PROPOS */
 /************/
@@ -60,8 +81,8 @@
 }
 .list_skills{
     text-align: center;
-    margin:0 auto !important;
-    width: 50% !important;
+    margin:0 auto 2rem !important;
+    width: 60% !important;
     
     
     li{
@@ -71,24 +92,46 @@
         display: table;
         
         
+        a{
+            display: table-cell;
+            vertical-align: middle;
+            height:200px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            color:#fff;
+            text-transform: uppercase;
+            
+            
+            span{
+                border:1px solid #fff;
+                padding: 0.125rem 0.4rem;
+                opacity:0.4;
+                transition: opacity 0.25s ease;
+            }
+            
+            &:hover{
+                span{
+                    opacity:1;
+                }
+            }
+        }
+        
     }/* fin de li */
     
-    /*li:nth-child(1) a{ 
-        background: url("../images/lozange_marron.svg") no-repeat;
+    li:nth-child(1) a{ 
+        background-image: url("../images/lozange_marron.svg");
     }
     
     li:nth-child(2) a{ 
-        background-image: url("../images/btn_lozange_rouge.svg"); 
+        background-image: url("../images/lozange_rouge.svg"); 
     }
     
     li:nth-child(3) a{ 
-        background-image: url("../images/btn_lozange_ocre_fonce.svg");
-    } */
+        background-image: url("../images/lozange_ocre_fonce.svg");
+    } 
     
 }
-
-
-
 
 /*******************************/
 /*** ELEMENTS INTERMEDIAIRES ***/
@@ -107,7 +150,7 @@
 
 
 
-.lozange {
+/*.lozange {
 	display: inline-block;
 	position: relative;
 	//text-indent: -9999px;
@@ -124,4 +167,4 @@
         background: url("../images/btn_lozange_marron.svg") no-repeat;
         background-position:0 -360px ;
     }
-}
+}*/
