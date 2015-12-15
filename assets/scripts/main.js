@@ -23,18 +23,18 @@
         $(document).foundation(); // Foundation JavaScript
         
         // SCROLL ANIME
-        $('a[href^="#"]').click(function(){
-            var the_id = $(this).attr("href");
-
-            $('html, body').animate({
-                scrollTop:$(the_id).offset().top
-            },
-                500,
-                'easeOutExpo'
-            );
-            
+         $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 4000);
             return false;
-        });
+          }
+        }
+      });
         
 
       },
