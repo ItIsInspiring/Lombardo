@@ -238,3 +238,66 @@
     }
 }
 
+/* */
+input:not([type]), 
+input[type="number"], 
+input[type="search"], 
+input[type="text"], 
+input[type="password"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="month"], 
+input[type="week"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="time"], 
+input[type="url"], 
+input[type="color"], 
+textarea {
+    -moz-appearance: none;
+    border-radius: 0px;
+    background-color: #FFF;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $ocre-claire;
+    //box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-family: inherit;
+    font-size: 0.875rem;
+    height: 2.3125rem;
+    margin: 0px 0px 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.15s linear 0s, background 0.15s linear 0s;
+}
+
+input:focus:not([type]), 
+input[type="number"]:focus, 
+input[type="search"]:focus, 
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="date"]:focus, 
+input[type="datetime"]:focus, 
+input[type="datetime-local"]:focus, 
+input[type="month"]:focus, 
+input[type="week"]:focus, 
+input[type="email"]:focus, 
+input[type="tel"]:focus, 
+input[type="time"]:focus, 
+input[type="url"]:focus, 
+input[type="color"]:focus, 
+textarea:focus {
+    background: #FFF none repeat scroll 0% 0%;
+    border-color: $ocre-fonce;
+    outline: 0px none;
+}
+
+
+.wpcf7-submit{
+    @extend %base-btn-ghost;
+    width:100%;
+    margin: 0;
+}

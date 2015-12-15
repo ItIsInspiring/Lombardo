@@ -4,5 +4,8 @@
      </div>
       <div class="container">
         <?php dynamic_sidebar('sidebar-footer'); ?>
+        
       </div>
+      
+      <p class="text-center">conception et réalisation :<br/><a href="http://www.guillaumedeschamps.fr">www.guillaumedeschamps.fr</a></p>
 </footer>
