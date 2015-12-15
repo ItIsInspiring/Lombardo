@@ -8,9 +8,6 @@
 	margin: 3.5rem auto;
     li{
         display: inline-block;
-        a{
-          @include base-btn-ghost;  
-        }
     }
 }
 

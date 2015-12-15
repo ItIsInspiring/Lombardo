@@ -147,6 +147,17 @@
     }
 }
 
+.last-section-deco{
+    width:100%;
+    
+    img{
+        width:100%;
+        height: auto
+    }
+}
+
+
+.rotate180{transform: rotate(180deg);}
 
 
 /*.lozange {
@@ -171,9 +182,48 @@
 /************/
 /* A VENIR */
 /************/
-.tribe-events-list-widget h3{
-    font-family:"caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif;
-    font-size: rem-calc(30);
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
+.tribe-events-list-widget {
+    .trait-lozanges{
+        width: 100%;
+        background-size: 10px 20px;
+        
+    }
+    
+    ol, a{
+        margin:0 0 3rem;
+    }
+    
+    li{
+        margin:1rem 0 1rem 0 !important;
+        border-bottom:1px dotted #ccc; 
+        padding-bottom: 1rem;
+    }
+    
+    a *{margin: 0}
+    
+    h3, h4{
+        font-family:"caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif !important;
+        
+        letter-spacing: 0.1rem;
+    }
+    
+    h3{
+      font-size: rem-calc(30);
+      text-transform: uppercase;  
+    }
+    
+    .event-date{
+            
+    }
+}
+
+.col-event-right {
+    display: table;
+    height: 40rem;
+   .chapeau{
+        display:table-cell;
+        vertical-align: middle;
+        height: 100%;
+       p{font-size:2.5rem;}
+    }
 }

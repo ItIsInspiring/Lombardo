@@ -60,11 +60,11 @@
             $terms = get_terms("Compétences"); 
             $count = count($terms); 
             echo '<ul class="menu-filter">'; 
-            echo '<li class="active-tag"><a href="#all" data-filter="*" title="Tout" class="btn-medium">Tout</a></li>'; 
+            echo '<li class="active-tag btn-medium"><a href="#all" data-filter="*" title="Tout">Tout</a></li>'; 
             if ( $count > 0 ) { 
                 foreach ( $terms as $term ) { 
                     $termname = ($term->slug); 
-                    echo ' <li><a href="#'.$termname.'" title="" data-filter=".'.$termname.'" class="ghost-btn" rel="'.$termname.'">'.$term->name.'</a></li>'; 
+                    echo ' <li><a href="#'.$termname.'" title="" data-filter=".'.$termname.'" class="btn-medium" rel="'.$termname.'">'.$term->name.'</a></li>'; 
                 } 
             } 
             echo "</ul>"; 
@@ -126,22 +126,26 @@
 <section id="news" class="section-content">
     <div class="row">
         <h2 id="events" class="title text-center">
-        
-        <?php
-        $post_16 = get_post(16); 
-        $title = $post_16->post_title;
-        echo $title;    
-        ?>
-        
+            <?php
+            $post_16 = get_post(16); 
+            $title = $post_16->post_title;
+            echo $title;    
+            ?>
         </h2>
+        
         <span class="trait-lozanges"></span>
+        
         <div class="medium-6 large-6 columns">
             <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('home-events') ) ?>
         </div>
-        <div class="medium-6 large-6 columns text-left">
-            <p class="chapeau">Alberto recherche une troupe de théâtre pour construire un projet en tant qu’auteur.</p>
-            <p class="chapeau">N’hésitez pas à le <a href="#contact">contacter</a>.</p>
+        
+        <div class="col-event-right medium-6 large-6 columns text-left">
+            <div class="chapeau">
+                <p>Alberto recherche une troupe de théâtre pour construire un projet en tant qu’auteur.</p>
+                <p>N’hésitez pas à le <a href="#contact">contacter</a>.</p>
+            </div>
         </div>
+        
     </div>
 </section>
 
@@ -173,6 +177,6 @@
         </div>
     </div>
 </section>
-<div class="section-deco"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco.svg"></div>
+<div class="last-section-deco"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco.svg" class=" rotate180"></div>
 
 <?php get_template_part('templates/page', 'footer'); ?>

@@ -40,19 +40,24 @@ if ( $posts ) : ?>
 			<li class="tribe-events-list-widget-events <?php tribe_events_event_classes() ?>">
 
 				<?php do_action( 'tribe_events_list_widget_before_the_event_title' ); ?>
+				
+				<div class="event-date">
+				<?php echo tribe_get_start_date($pageID, false, "j/n/Y"); ?>
+				</div>
+				
 				<!-- Event Title -->
-				<h4 class="entry-title summary">
-					<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" rel="bookmark"><?php the_title(); ?></a>
+				<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" rel="bookmark" title="voir l'évènement <?php the_title(); ?>" ><h4 class="entry-title summary">
+					<?php the_title(); ?>
 				</h4>
+				</a>
 
 				<?php do_action( 'tribe_events_list_widget_after_the_event_title' ); ?>
 				<!-- Event Time -->
+                
 
 				<?php do_action( 'tribe_events_list_widget_before_the_meta' ) ?>
 
-				<div class="duration">
-					<?php echo tribe_events_event_schedule_details(); ?>
-				</div>
+				
 
 				<?php do_action( 'tribe_events_list_widget_after_the_meta' ) ?>
 			</li>
@@ -61,8 +66,8 @@ if ( $posts ) : ?>
 		?>
 	</ol><!-- .hfeed -->
 
-	<p class="tribe-events-widget-link">
-		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>" rel="bookmark"><?php printf( __( 'View All %s', 'the-events-calendar' ), $events_label_plural ); ?></a>
+	<p class="tribe-events-widget-link text-center">
+		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>" rel="bookmark" class="btn-large"><?php printf( __( 'View All %s', 'the-events-calendar' ), $events_label_plural ); ?></a>
 	</p>
 
 <?php

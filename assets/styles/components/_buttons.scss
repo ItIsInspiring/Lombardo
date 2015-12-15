@@ -1,7 +1,7 @@
 //90803a
 //a, .btn{ @include button; }
 
-@mixin base-btn-ghost{
+%base-btn-ghost{
     background: transparent;
     border: 2px solid $ocre-fonce;
     color: $ocre-fonce;
@@ -15,17 +15,16 @@
     }
 }
 
-.btn-g-small,
-.btn-g-medium,
-.btn-g-large{
-    @include base-btn-ghost;
+.btn-small, 
+.btn-medium,
+.btn-large{
+    @extend %base-btn-ghost;  
 }
 
-
-.btn-small{}
-.btn-medium{}
-.btn-large{}
-
+.btn-large{
+    width:100%;
+    text-transform: uppercase;
+}
 
 .scroll-bas{
     text-align: center;
