@@ -9,6 +9,15 @@
     li{
         display: inline-block;
     }
+    
+    a{
+        @extend %base-btn-ghost;
+    }
+    
+    .active-tag{
+        background: $ocre-fonce;
+        color: #fff;
+    }
 }
 
 .grid{
@@ -23,7 +32,6 @@
     height: 360px;
     
     display: inline-block;
-    
     
     
     a{
@@ -43,7 +51,6 @@
         }
     }
     
-   
     
     /* li.projet div.projet_desc */
     .projet_desc{
@@ -65,56 +72,3 @@
 
     }/* fin de projet_desc */
 }/* fin de projet */
-
- /*.auteur a{
-        background: transparent url("../images/lozange_rouge.svg") no-repeat;
-        background-size: contain;
-        background-position: center;
-    }
-    
-.comedien a{
-    background: transparent url("../images/lozange_marron.svg") no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-.animateur a{
-    background: transparent url("../images/lozange_ocre_fonce.svg") no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-.radio a{
-    background: transparent url("../images/lozange_ocre_claire.svg") no-repeat;
-    background-size: contain;
-    background-position: center;
-    
-    &:hover{
-        background: transparent url("../images/lozange_ocre_fonce.svg") no-repeat;
-        background-size: contain;
-        background-position: center;
-    }
-}*/
-
-/*.losange{
-	margin:120px auto;
-	width: 0;
-	height: 0;
-	border-left: 120px solid transparent;
-	border-right: 120px solid transparent;
-	border-bottom: 200px solid $bordeaux;
-	position: relative;
-    top:0;
-}
-.losange:before{
-	content:'';
-	border: 1px solid #069;
-	border-left: 120px solid transparent;
-	border-right: 120px solid transparent;
-	border-top: 200px solid $bordeaux;
-	width:0;
-	height:0;
-	position: absolute;
-	top:200px;
-	left:-120px;
-}*/

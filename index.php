@@ -1,9 +1,10 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
 <div class="section-deco"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco.svg"></div>
-<section id="about" class="section-content">
+<section id="about" class="section-content" data-magellan-destination="about">
+   <a name="about"></a>
     <div class="row">
-        <h2 id="#about" class="title center text-center">
+        <h2 class="title center text-center">
         
         <?php
         $post_6 = get_post( 6 ); 
@@ -43,10 +44,10 @@
     <img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco1.svg"/>    
 </div>
 
-<section id="gallery" class="section-content">
+<section id="gallery" class="section-content" data-magellan-destination="gallery">
     <div class="row">
         
-        <h2 id="gallery" class="title text-center">
+        <h2 class="title text-center">
         <?php
         $post_14 = get_post( 14 ); 
         $title = $post_14->post_title;
@@ -60,11 +61,11 @@
             $terms = get_terms("Compétences"); 
             $count = count($terms); 
             echo '<ul class="menu-filter">'; 
-            echo '<li class="active-tag btn-medium"><a href="#all" data-filter="*" title="Tout">Tout</a></li>'; 
+            echo '<li><a href="#all" data-filter="*" title="Tout" class="active-tag">Tout</a></li>'; 
             if ( $count > 0 ) { 
                 foreach ( $terms as $term ) { 
                     $termname = ($term->slug); 
-                    echo ' <li><a href="#'.$termname.'" title="" data-filter=".'.$termname.'" class="btn-medium" rel="'.$termname.'">'.$term->name.'</a></li>'; 
+                    echo ' <li><a href="#'.$termname.'" title="" data-filter=".'.$termname.'" rel="'.$termname.'">'.$term->name.'</a></li>'; 
                 } 
             } 
             echo "</ul>"; 
@@ -123,7 +124,7 @@
     <img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco2.svg"/>    
 </div>
 
-<section id="news" class="section-content">
+<section id="news" class="section-content" data-magellan-destination="news">
     <div class="row">
         <h2 id="events" class="title text-center">
             <?php
@@ -152,9 +153,9 @@
     <img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco3.svg"/>    
 </div>
 
-<section id="contact" class="section-content">
+<section id="contact" class="section-content" data-magellan-destination="contact">
     <div class="row ">
-        <h2 id="contact" class="title text-center">
+        <h2 class="title text-center">
         
         <?php
         $post_8 = get_post( 8 ); 
