@@ -141,8 +141,7 @@
         
         <div class="col-event-right medium-6 large-6 columns text-left">
             <div class="chapeau">
-                <p>Alberto recherche une troupe de théâtre pour construire un projet en tant qu’auteur.</p>
-                <p>N’hésitez pas à le <a href="#contact">contacter</a>.</p>
+                <p>Alberto recherche une troupe de théâtre pour construire un projet en tant qu’auteur.<br/></br/>N’hésitez pas à le <a href="#contact">contacter</a>.</p>
             </div>
         </div>
         

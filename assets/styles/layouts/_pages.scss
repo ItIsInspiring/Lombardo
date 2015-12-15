@@ -200,6 +200,10 @@
     }
     
     a *{margin: 0}
+    a {
+        h4{color: $ocre-fonce;}
+        &:hover{text-decoration: underline}
+    }
     
     h3, h4{
         font-family:"caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif !important;
@@ -224,6 +228,13 @@
         display:table-cell;
         vertical-align: middle;
         height: 100%;
-       p{font-size:2.5rem;}
+       p{
+           font-size:2.5rem;
+           background: url("../images/lozange_ocre_claire.svg");
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: contain;
+       }
     }
 }
+
