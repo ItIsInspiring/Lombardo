@@ -27,7 +27,7 @@
 .section-content-bas{ transform: rotate(180deg); }
 
 .trait-lozanges{
-    background:transparent url(../images/lozange_ocre_claire.svg) repeat-x;
+    background:transparent url(../images/lozange_ocre_fonce.svg) repeat-x;
     height: 5rem;
     width: 20rem;
     margin: 0 auto;
@@ -45,9 +45,7 @@
     margin-bottom: 2.5rem;
 }
 
-/*************/ 
 /* INTRO LOGO*/
-/*************/ 
 #intro{
     width:100vw;
     height:93vh;
@@ -132,10 +130,8 @@
     
 }
 
-/*******************************/
 /*** ELEMENTS INTERMEDIAIRES ***/
 /* POUR LA DECO ENTRE LES BLOCS*/
-/*******************************/
 .section-deco{
     width:100%;
     background: #fff url("../images/gravure_1@1X.gif") no-repeat;
@@ -179,9 +175,7 @@
     }
 }*/
 
-/************/
 /* A VENIR */
-/************/
 .tribe-events-list-widget {
     .trait-lozanges{
         width: 100%;
@@ -238,7 +232,7 @@
     }
 }
 
-/* */
+/* CONTACT */
 input:not([type]), 
 input[type="number"], 
 input[type="search"], 
@@ -301,3 +295,58 @@ textarea:focus {
     width:100%;
     margin: 0;
 }
+
+
+/*********************/
+/* PAGES SECONDAIRES */
+/*********************/
+
+    
+    header{
+        margin: 4.375rem auto 5,625rem;
+
+        h1.entry-title{
+            text-align: center;
+            margin: 3rem auto 0;
+            font-size: 3.8rem;
+            letter-spacing: 0.1rem;
+        }
+    }
+
+.uppercase{text-transform: uppercase}
+
+/*les commentaires*/
+#wrapper-comments{
+  background:#efeac5; 
+    outline: 1px solid #efeac5; 
+}
+#comments{
+
+}
+
+
+/* PAGE COMPÉTENCE */
+#Comptence-main-content{
+    margin-bottom:3rem;
+}
+/* liste des projets liés par la compétence */
+.related-projects{
+    background: url("../images/lozange_ocre_fonce.svg") repeat-x;
+    background-position: top center;
+    
+    h3{
+        font-size: rem-calc(54);
+        padding: 2.5rem 0 0.8rem;
+    }
+    
+    ul{
+        @include block-grid(3);
+        li{
+            
+        }
+    }
+}
+
+/* PAGE PROJET */
+
+/* PAGE EVENT */

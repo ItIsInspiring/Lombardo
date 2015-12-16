@@ -17,7 +17,8 @@
 
 .btn-small, 
 .btn-medium,
-.btn-large{
+.btn-large
+{
     @extend %base-btn-ghost;  
 }
 
@@ -37,3 +38,4 @@
 
 }
 
+.submit{}

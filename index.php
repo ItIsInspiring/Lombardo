@@ -45,6 +45,7 @@
 </div>
 
 <section id="gallery" class="section-content" data-magellan-destination="gallery">
+   <a name="gallery"></a>
     <div class="row">
         
         <h2 class="title text-center">
@@ -85,7 +86,7 @@
 
                 if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                <div id="post-<?php the_ID(); ?>" class="projet <?php
+                <div id="post-<?php the_ID(); ?>" class="home-page-projet <?php
                     $taxonomy="Compétences";	
                     $terms = get_the_terms( $post->ID, $taxonomy );
                     $mesCat="" ;
@@ -125,6 +126,7 @@
 </div>
 
 <section id="news" class="section-content" data-magellan-destination="news">
+   <a name="news"></a>
     <div class="row">
         <h2 id="events" class="title text-center">
             <?php
@@ -154,6 +156,7 @@
 </div>
 
 <section id="contact" class="section-content" data-magellan-destination="contact">
+   <a name="contact"></a>
     <div class="row ">
         <h2 class="title text-center">
         

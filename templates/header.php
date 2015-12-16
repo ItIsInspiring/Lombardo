@@ -1,3 +1,6 @@
+<?php
+    if(is_home()){
+?>
 <section id="intro">
     <div id="splash" class="text-center">
         <h1>Alberto Lombardo</h1>
@@ -6,6 +9,9 @@
         <a href="#about" class="scroll-bas">Cliquez pour descendre</a>
     </div>  
 </section>
+<?php
+               }
+?>
 
 <div data-magellan-expedition="fixed">
     <nav class="top-bar contain-to-grid" data-topbar>
@@ -43,9 +49,12 @@
             wp_nav_menu( $defaults );
 
             ?>
-        </section>    
+        </section>  
+        
+            
 
     </nav>
+    
 </div>
  
 
