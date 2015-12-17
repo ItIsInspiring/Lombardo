@@ -98,6 +98,7 @@
             background-position: center;
             color:#fff;
             text-transform: uppercase;
+            font-family:"caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif !important;
             
             
             span{
@@ -314,6 +315,21 @@ textarea:focus {
     }
 
 .uppercase{text-transform: uppercase}
+.vignette_projet{
+    width: rem-calc(300);
+    height: rem-calc(225);
+    overflow: hidden;
+    
+    @media #{$small-up} {
+        width:100%;    
+    }
+    
+    
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
 
 /*les commentaires*/
 #wrapper-comments{
@@ -329,23 +345,54 @@ textarea:focus {
 #Comptence-main-content{
     margin-bottom:3rem;
 }
+
+.comedien
+
 /* liste des projets liés par la compétence */
 .related-projects{
     background: url("../images/lozange_ocre_fonce.svg") repeat-x;
     background-position: top center;
+    
     
     h3{
         font-size: rem-calc(54);
         padding: 2.5rem 0 0.8rem;
     }
     
-    ul{
-        @include block-grid(3);
-        li{
-            
-        }
+    h4{
+        font-family:"caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif !important;
     }
-}
+    
+    ul{
+        li{
+            list-style: none;
+            background: url(../images/lozange_ocre_claire.svg) no-repeat;
+            background-position: center;
+            background-size: contain;
+            height: rem-calc(225);
+            text-align: center;
+            display: table;
+            
+            &:hover{
+               background: url(../images/lozange_ocre_fonce.svg) no-repeat; 
+               background-position: center;
+               background-size: contain;
+            }
+            .wrapper-related{ 
+                display:table-cell; 
+                vertical-align: middle;
+                height: rem-calc(225);
+                
+                a, a span{ color:black}
+                
+            }
+            
+             @media #{$small-up} {
+                margin-bottom: 1rem;    
+            }
+        }/* fin de li */
+    }/* fin de ul */
+}/* fin de related_projet */
 
 /* PAGE PROJET */
 
