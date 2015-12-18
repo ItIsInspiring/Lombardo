@@ -1,27 +1,34 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class('row'); ?>>
+   
     <header>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
-      <?php get_template_part('templates/entry-meta'); ?>
-      <p>préciser auteur ou comédien ?</p>
+      <h1 class="entry-title uppercase"><?php the_title(); ?><span class="trait-lozanges"></span></h1>
     </header>
+    
     <div class="entry-content row">
          <aside id="projet-infos" class="medium-4 columns">
-             <ul>
-                 <li>image</li>
-                 <li>Personnage : <span>6</span></li>
-                 <li>Durée : <span>2H</span></li>
-                 <li>Année : <span>2015</span></li>
-                 <li>
-                     Un petit texte descriptif...
-                 </li>
-             </ul>
+            
+            <?php
+                $terms = get_the_terms( $post->ID, 'Compétences' );
+                if ( $terms && ! is_wp_error( $terms ) ) : 
+                    $draught_links = array();
+                    foreach ( $terms as $term ) {
+                        $draught_links[] = '<a href="/a-propos/'.$term->slug .'" title="voir la page '. $term->name .'">'.$term->name .'</a>';
+                    }
+                    $on_draught = join( " et ", $draught_links );
+                ?>
+                <p>Sur ce projet, Alberto a participé en tant que&nbsp;: <?php echo $on_draught; ?>.</p>
+            <?php endif; ?>
+
+             <p><?php the_meta(); ?> </p>
+             
          </aside>
+         
           <div id="projet-main-content" class="medium-8 columns">
-              
-              <?php the_content(); ?>
                
+                <?php the_content(); ?>
           </div>
+          
     </div>
     <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>

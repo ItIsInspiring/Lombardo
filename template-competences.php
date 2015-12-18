@@ -94,30 +94,30 @@
                     if ( $the_query_related->have_posts() ) {
                          while ( $the_query_related->have_posts() ) {
                             $the_query_related->the_post();
-                ?>
+                    ?>
 
-                <li class="small-centered small-10  medium-4 medium-uncentered columns">
-                  <div class="wrapper-related">
-                   <a href="<?php the_permalink() ?>"  >
-                        <h4><?php the_title(); ?></h4>
-                        <span>
+                        <li class="small-centered small-10  medium-4 medium-uncentered columns">
+                          <div class="wrapper-related">
+                               <a href="<?php the_permalink() ?>"  >
+                                    <h4><?php the_title(); ?></h4>
+                                    <span>
+                                    <?php
+                                        $infosprojet = get_post_meta($post->ID, 'projet_duree', true);
+                                        foreach($infosprojet as $infoprojet){
+                                            echo $infoprojet['annee-de-creation'];
+                                        }
+                                    ?>
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+
                         <?php
-                        $infosprojet = get_post_meta($post->ID, 'projet_duree', true);
-                        foreach($infosprojet as $infoprojet){
-                            echo $infoprojet['annee-de-creation'];
-                        }
-                             ?>
-                        </span>
-                    </a>
-                    </div>
-                </li>
-
-                <?php
-                         }
-                              } else {
-                        // no posts found
-                        echo "<li>Il n'y a pas de projet dans cette catégorie pour le moment.</li>";
-                    }
+                         } /* fin de while */
+                      } else {
+                            // no posts found
+                            echo "<li>Il n'y a pas de projet dans cette catégorie pour le moment.</li>";
+                      }/* fin de if */
                     /* Restore original Post Data */
                     wp_reset_postdata();
                  ?>

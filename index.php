@@ -77,7 +77,9 @@
                 <?php 
                 $args = array(
                   'post_type' => 'Projet',
-                    'posts_per_page' => -1
+                    'posts_per_page' => -1,
+                    
+                    'order' => 'ASC',
 
                     );
 

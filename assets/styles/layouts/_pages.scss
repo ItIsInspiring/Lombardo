@@ -43,6 +43,9 @@
 .chapeau{
     font-size: 2rem; 
     margin-bottom: 2.5rem;
+    @media #{$small-up} {
+        font-size: 1.5rem;    
+    }
 }
 
 /* INTRO LOGO*/
@@ -197,7 +200,7 @@
     a *{margin: 0}
     a {
         h4{color: $ocre-fonce;}
-        &:hover{text-decoration: underline}
+        &:hover, &:focus{text-decoration: underline}
     }
     
     h3, h4{
@@ -346,13 +349,11 @@ textarea:focus {
     margin-bottom:3rem;
 }
 
-.comedien
 
 /* liste des projets liés par la compétence */
 .related-projects{
     background: url("../images/lozange_ocre_fonce.svg") repeat-x;
     background-position: top center;
-    
     
     h3{
         font-size: rem-calc(54);
@@ -373,23 +374,25 @@ textarea:focus {
             text-align: center;
             display: table;
             
+            
             &:hover{
                background: url(../images/lozange_ocre_fonce.svg) no-repeat; 
                background-position: center;
                background-size: contain;
             }
+            
             .wrapper-related{ 
                 display:table-cell; 
                 vertical-align: middle;
                 height: rem-calc(225);
                 
                 a, a span{ color:black}
-                
             }
             
              @media #{$small-up} {
                 margin-bottom: 1rem;    
             }
+        
         }/* fin de li */
     }/* fin de ul */
 }/* fin de related_projet */
