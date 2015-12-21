@@ -1,2 +1,17 @@
 /* pour la page "single-projet" */
 
+.nav-contribs{
+    border:0px solid red;
+    width: 100%;
+    margin: 0 auto;
+    ul{
+        text-align: center;
+        li{
+            list-style: none;
+            display: inline-block;
+            
+            a{
+            }
+        }
+    }
+}

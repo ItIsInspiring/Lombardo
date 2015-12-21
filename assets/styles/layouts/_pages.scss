@@ -339,8 +339,11 @@ textarea:focus {
   background:#efeac5 url('../images/bg-comments.png') no-repeat;
     background-position: bottom center;
     outline: 1px solid #efeac5; 
+    padding-top: 2rem;
 }
-
+.comments h2{
+    font-family:"caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif !important;
+}
 .comment-list{
     &, .children{list-style: none;}
     
@@ -354,16 +357,29 @@ textarea:focus {
             width: 110%;
             margin-left: -5%;
             
-            a {color:$ocre_fonce;}
+            a {color:#fff;}
         }
         
         .comment-content{margin-top: 1rem;}
         
         .comment-form label{font-size: 1.875rem !important;}
+        
+        .comment-author{
+            background: $ocre-fonce; 
+            color: #fff; 
+            border: 0px solid $bordeaux;
+            
+            a{ color:#fff;}
+        }
     }
 }
 
+.comment-notes{
+    font-size: 1.5rem;
+}
+
 .comment-respond{
+    margin: 4rem auto !important;
     .comment-reply-title{
         text-align: center;
         font-family:"caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif !important;
@@ -371,6 +387,26 @@ textarea:focus {
         font-size: 3rem;
     }
 }
+
+#commentform{
+    label{font-size: 1.875rem;}    
+}
+
+.form-submit .submit{
+    background-color: $bordeaux;
+    color:#fff;
+    text-align: center;
+    width: 100%;
+    border: 0;
+    margin: 0; 
+    padding: 1rem;
+    
+    &:hover{
+        background-color: $ocre-fonce;
+        color: #fff;
+    }
+}
+
 
 /* PAGE COMPÉTENCE */
 #Comptence-main-content{
@@ -436,3 +472,17 @@ textarea:focus {
 }
 
 /* PAGE EVENT */
+.tribe-events-single-event-title{
+    text-align: center;
+    margin: 3rem auto 0;
+    font-size: 3.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: normal !important;
+    font-family: "bodonixtregular", Cambria, Times, serif !important;
+}
+
+.single-tribe_events .tribe-events-schedule h3{
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+}
