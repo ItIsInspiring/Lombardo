@@ -258,8 +258,8 @@ textarea {
     background-color: #FFF;
     border-style: solid;
     border-width: 2px;
-    border-color: $ocre-claire;
-    //box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+    border-color: $ocre-fonce;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
     color: rgba(0, 0, 0, 0.75);
     display: block;
     font-family: inherit;
@@ -289,7 +289,7 @@ input[type="url"]:focus,
 input[type="color"]:focus, 
 textarea:focus {
     background: #FFF none repeat scroll 0% 0%;
-    border-color: $ocre-fonce;
+    border-color: $ocre-claire;
     outline: 0px none;
 }
 
@@ -336,18 +336,47 @@ textarea:focus {
 
 /*les commentaires*/
 #wrapper-comments{
-  background:#efeac5; 
+  background:#efeac5 url('../images/bg-comments.png') no-repeat;
+    background-position: bottom center;
     outline: 1px solid #efeac5; 
 }
-#comments{
 
+.comment-list{
+    &, .children{list-style: none;}
+    
+    article{
+        background-color: #fff;
+        margin-bottom: 1rem;
+        
+        &, .comment-meta {padding: 1rem;}
+        .comment-meta{
+            background: $ocre_claire;
+            width: 110%;
+            margin-left: -5%;
+            
+            a {color:$ocre_fonce;}
+        }
+        
+        .comment-content{margin-top: 1rem;}
+        
+        .comment-form label{font-size: 1.875rem !important;}
+    }
 }
 
+.comment-respond{
+    .comment-reply-title{
+        text-align: center;
+        font-family:"caviar_dreamsregular", Helvetica, Roboto, Arial, sans-serif !important;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+}
 
 /* PAGE COMPÉTENCE */
 #Comptence-main-content{
     margin-bottom:3rem;
 }
+
 
 
 /* liste des projets liés par la compétence */
@@ -398,5 +427,12 @@ textarea:focus {
 }/* fin de related_projet */
 
 /* PAGE PROJET */
+#list_infosProjet{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{margin-bottom:0.5rem;}
+    ul{list-style: none;margin: 0; padding: 0}
+}
 
 /* PAGE EVENT */

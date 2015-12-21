@@ -101,12 +101,7 @@
                                <a href="<?php the_permalink() ?>"  >
                                     <h4><?php the_title(); ?></h4>
                                     <span>
-                                    <?php
-                                        $infosprojet = get_post_meta($post->ID, 'projet_duree', true);
-                                        foreach($infosprojet as $infoprojet){
-                                            echo $infoprojet['annee-de-creation'];
-                                        }
-                                    ?>
+                                    <?php the_cfc_field('my_meta_name', 'duree'); ?>
                                     </span>
                                 </a>
                             </div>

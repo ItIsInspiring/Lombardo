@@ -1,5 +1,12 @@
 //90803a
 //a, .btn{ @include button; }
+aside{
+    li{
+        a:hover, a:focus{
+            text-decoration: underline;
+        }
+    }
+}
 
 %base-btn-ghost{
     background: transparent;
