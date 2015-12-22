@@ -2,12 +2,11 @@
 /* HEADER */
 /**********/
 .title-area{
+    a{
 
-    .name{
-         display:none;
     }
-    
 }
+
 .main-menu1{
     text-align: center;
 
@@ -49,11 +48,16 @@
     
 }/* fin de main-menu1 */
 
-#menu_principal{
-    display: inline-block;
-    position: relative;
-    //background-color: transparent;
+#small-menu{
+    #menu-item-123,
+    #menu-item-124,
+    #menu-item-125,
+    #menu-item-126 {
+        display:none;
+    }
     
-    //li{background-color: transparent;}
-    
+    .top-bar-section{
+        width:100% !important;    
+    }
+    }
 }
