@@ -2,10 +2,11 @@
 /* HOMEPAGE */
 /************/
 
+
 /* LES BLOCS PRINCIPAUX */
 .bg-bloc{
     background-color: $gris-jaune;
-    outline: 1px solid $gris-jaune;
+    //outline: 1px solid $gris-jaune;
     @media #{$small-only}{
         padding: 0 1em;
     }
@@ -13,6 +14,7 @@
 .section-content{  
     background-color: $gris-jaune;
     outline: 2px solid #F2EFE6;
+    width: 100%;
 }
 .section-content-haut,
 .section-content-bas{
@@ -29,7 +31,7 @@
 .trait-lozanges{
     background:transparent url(../images/lozange_ocre_fonce.svg) repeat-x;
     height: 5rem;
-    width: 20rem;
+    width: 18.75rem;
     margin: 0 auto;
     border:0px solid red;
     display: block;
@@ -43,10 +45,12 @@
 .chapeau{
     font-size: 2rem; 
     margin-bottom: 2.5rem;
-    @media #{$small-up} {
+    @media #{$small-only} {
         font-size: 1.5rem;    
     }
 }
+
+.hidden-a{display:none}
 
 /* INTRO LOGO*/
 #intro{

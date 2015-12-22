@@ -11,6 +11,7 @@
 .main-menu{
  text-align: center;
 }
+
 #menu_principal{
     display: inline-block;
     position: relative;
@@ -19,11 +20,35 @@
     //li{background-color: transparent;}
     
 }
+
 #menu-item-105 {
     a{
         font-weight: bold;
         //font-size: 1.5rem;
         display: inline-block;
         text-transform:uppercase;
+    }
+}
+
+#menu-item-123,
+#menu-item-124,
+#menu-item-125,
+#menu-item-126
+{
+    background-image: url(../images/lozange_blanc.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    @media screen and (max-width : 680px){
+        display: none;
+    }
+    
+    a{
+        cursor: none;
+        padding: 0px 0.15rem !important;
+        &:hover, &:focus {
+            background: $ocre-fonce;
+            
+        }
     }
 }

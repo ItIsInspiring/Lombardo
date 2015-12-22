@@ -6,6 +6,8 @@
 .menu-filter{
     display: table;   /* Allow the centering to work */
 	margin: 3.5rem auto;
+    text-align: center;
+    line-height: 3rem;
     li{
         display: inline-block;
     }

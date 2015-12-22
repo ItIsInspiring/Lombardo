@@ -1,43 +1,52 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
 <div class="section-deco"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco.svg"></div>
+
 <section id="about" class="section-content" data-magellan-destination="about">
-   <a name="about"></a>
+    <a name="about" class="hidden-a"></a>
+    
     <div class="row">
-        <h2 class="title center text-center">
-        
-        <?php
-        $post_6 = get_post( 6 ); 
-        $title = $post_6->post_title;
-        echo $title;    
-        ?>
-        
-        </h2>
-        <span class="trait-lozanges"></span>
-        <div>
+        <div class="small-12 medium-12 columns">
+            <h2 class="title center text-center">
+                <?php
+                $post_6 = get_post( 6 ); 
+                $title = $post_6->post_title;
+                echo $title;    
+                ?>
+            </h2>
+            <span class="trait-lozanges"></span>
+        </div>    
+    </div> 
+    
+    <div class="row">   
+        <div class="small-11 small-centered medium-12 medium-centered columns">
             <p class="chapeau text-center">Son théâtre est un théâtre du dire. Le dire comme une urgence, un acte, une revendication physique. Il écrit des pièces sur les relations humaines, amoureuses, familiales, sur l'identité, la transformation, l’engagement, le désir, le sexe et la spiritualité.</p>
         </div>
-        
-        <div class="row">
-            <div class="medium-6 columns">
-                <p>Sociétaire à la SACD et membre des EAT (écrivains associés du théâtre), Alberto Lombardo a suivi une formation théâtrale de comédien au conservatoire d'art dramatique de Lyon et aux Ateliers Antoine Vitez au Théâtre National de Chaillot à Paris. Ses rencontres avec Jean-Claude de Feugas et Bruno Sachel, concrétisent son désir d’écrire et toutes les voix qui résonnent en lui depuis l'enfance prennent enfin corps.</p>
-            </div>
-            <div class="medium-6 columns">
-                <p>Ses pièces sont jouées en France et à l'étranger (Italie, Allemagne, Espagne Roumanie, Liban, USA, Montréal). Elles sont éditées aux éditions Art et comédie et l’Harmattan. Ses fictions radiophoniques sont diffusées sur France Inter et France Culture.</p>
-            </div>
+    </div>  
+    <!-- fin de row -->  
+          
+    <div class="row">
+        <div class="small-10 small-centered medium-6 medium-uncentered columns">
+            <p>Sociétaire à la SACD et membre des EAT (écrivains associés du théâtre), Alberto Lombardo a suivi une formation théâtrale de comédien au conservatoire d'art dramatique de Lyon et aux Ateliers Antoine Vitez au Théâtre National de Chaillot à Paris. Ses rencontres avec Jean-Claude de Feugas et Bruno Sachel, concrétisent son désir d’écrire et toutes les voix qui résonnent en lui depuis l'enfance prennent enfin corps.</p>
         </div>
-        <!-- fin de row -->
         
-        <h3 class="text-center">Alberto est à la fois...</h3>
+        <div class="small-10 small-centered medium-6 medium-uncentered columns">
+            <p>Ses pièces sont jouées en France et à l'étranger (Italie, Allemagne, Espagne Roumanie, Liban, USA, Montréal). Elles sont éditées aux éditions Art et comédie et l’Harmattan. Ses fictions radiophoniques sont diffusées sur France Inter et France Culture.</p>
+        </div>
+    </div>
+    <!-- fin de row -->
+                   
+    <div class="row">
+        <h3 class="text-center small-12 medium-12">Alberto est à la fois...</h3>
             
         <ul class="list_skills row">
             <li class="medium-4 columns"><a href="/a-propos/auteur/">Auteur<br/><span>+</span></a></li>
             <li class="medium-4 columns"><a href="/a-propos/comedien/" >Comédien<br/><span>+</span></a></li>
             <li class="medium-4 columns"><a href="/a-propos/animateur/" >Animateur<br/><span>+</span></a></li>
         </ul>
-        <!-- fin de row -->    
-        
-    </div>
+        <!-- fin de row -->  
+    </div>               
+                    
 </section>
 
 <div class="section-deco">
@@ -45,7 +54,7 @@
 </div>
 
 <section id="gallery" class="section-content" data-magellan-destination="gallery">
-   <a name="gallery"></a>
+   <a name="gallery" class="hidden-a"></a>
     <div class="row">
         
         <h2 class="title text-center">
@@ -128,7 +137,7 @@
 </div>
 
 <section id="news" class="section-content" data-magellan-destination="news">
-   <a name="news"></a>
+   <a name="news" class="hidden-a"></a>
     <div class="row">
         <h2 id="events" class="title text-center">
             <?php
@@ -158,7 +167,7 @@
 </div>
 
 <section id="contact" class="section-content" data-magellan-destination="contact">
-   <a name="contact"></a>
+   <a name="contact" class="hidden-a"></a>
     <div class="row ">
         <h2 class="title text-center">
         
