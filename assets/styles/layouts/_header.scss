@@ -8,9 +8,46 @@
     }
     
 }
-.main-menu{
- text-align: center;
-}
+.main-menu1{
+    text-align: center;
+
+    dl{
+        background-color: $ocre-fonce;
+        height: 3rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        border:0px solid green;
+        
+        .active a, 
+        a:hover, 
+        a:focus{
+            color:#fff !important;
+            padding: 0.5rem  0.25rem ;
+            background-color: darken( $ocre-fonce, 10% );
+        }
+        
+        dd{
+            display:inline-block;
+            border:0px solid yellow;
+            padding-top: 0;  
+            text-align: center;
+            float: none !important;
+            
+            a, span{
+                display: table-cell;
+                vertical-align: middle;
+                height: 3rem;
+                padding: 0.5rem  0.25rem ;
+                color:#fff;
+            }
+            
+        }/* fin de dd */
+        
+    }/* fin de dl */
+    
+}/* fin de main-menu1 */
 
 #menu_principal{
     display: inline-block;
@@ -19,36 +56,4 @@
     
     //li{background-color: transparent;}
     
-}
-
-#menu-item-105 {
-    a{
-        font-weight: bold;
-        //font-size: 1.5rem;
-        display: inline-block;
-        text-transform:uppercase;
-    }
-}
-
-#menu-item-123,
-#menu-item-124,
-#menu-item-125,
-#menu-item-126
-{
-    background-image: url(../images/lozange_blanc.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    @media screen and (max-width : 680px){
-        display: none;
-    }
-    
-    a{
-        cursor: none;
-        padding: 0px 0.15rem !important;
-        &:hover, &:focus {
-            background: $ocre-fonce;
-            
-        }
-    }
 }
