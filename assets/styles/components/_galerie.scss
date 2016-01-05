@@ -34,7 +34,7 @@
     height: 360px;
     
     display: inline-block;
-    
+        transition: all 0.6s ;
     
     a{
        display: table; 
@@ -74,3 +74,51 @@
 
     }/* fin de projet_desc */
 }/* fin de projet */
+
+.magnifier {
+    background:rgba(237,49,49,.7) url(images/magnifier.png) no-repeat center;
+    position:absolute;
+    top:10px;
+    left:10px;
+    bottom:10px;
+    right:10px;
+    opacity:0;
+    -webkit-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    -ms-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    transition:all .3s ease-in-out;
+}
+
+.entry:hover .video-hover,
+.entry:hover .magnifier { opacity:1; }
+ 
+
+.isotope-item {
+  z-index: 2;
+}
+ 
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+ 
+.isotope,
+.isotope .isotope-item {
+-webkit-transition-duration: 0.8s;
+   -moz-transition-duration: 0.8s;
+        transition-duration: 0.8s;
+}
+ 
+.isotope {
+-webkit-transition-property: height, width;
+   -moz-transition-property: height, width;
+        transition-property: height, width;
+}
+ 
+.isotope .isotope-item {
+-webkit-transition-property: -webkit-transform, opacity;
+   -moz-transition-property:    -moz-transform, opacity;
+        transition-property:         transform, opacity;
+}
+

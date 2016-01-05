@@ -57,6 +57,32 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+        var $container = $('.portfolioContainer');
+        $container.isotope({
+            filter: '*',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+
+        $('.portfolioFilter a').click(function(){
+            $('.portfolioFilter .active').removeClass('active');
+            $(this).addClass('active');
+
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+             });
+             return false;
+        }); 
+          
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

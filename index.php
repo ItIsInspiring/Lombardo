@@ -1,6 +1,12 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
-<div class="section-deco"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco.svg"></div>
+<section id="animation" class="show-for-medium-up">
+    <div class="row">
+        
+    </div>
+</section>
+
+<div class="section-content-haut"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco.svg"></div>
 
 <section id="about" class="section-content" data-magellan-destination="about">
     <a name="about" class="hidden-a"></a>
@@ -70,8 +76,8 @@
         <?php 
             $terms = get_terms("Compétences"); 
             $count = count($terms); 
-            echo '<ul class="menu-filter">'; 
-            echo '<li><a href="#all" data-filter="*" title="Tout" class="active-tag">Tout</a></li>'; 
+            echo '<ul class="menu-filter portfolioFilter">'; 
+            echo '<li><a href="#all" data-filter="*" title="Tout" class="active">Tout</a></li>'; 
             if ( $count > 0 ) { 
                 foreach ( $terms as $term ) { 
                     $termname = ($term->slug); 
@@ -81,7 +87,7 @@
             echo "</ul>"; 
         ?>    
             
-        <div class="row-galery grid">
+        <div class="portfolioContainer row-galery grid">
 
                 <?php 
                 $args = array(
@@ -97,7 +103,7 @@
 
                 if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
 
-                <div id="post-<?php the_ID(); ?>" class="home-page-projet <?php
+                <div id="post-<?php the_ID(); ?>" class="home-page-projet entry <?php
                     $taxonomy="Compétences";	
                     $terms = get_the_terms( $post->ID, $taxonomy );
                     $mesCat="" ;

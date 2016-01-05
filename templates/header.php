@@ -43,7 +43,9 @@
             <h1>Alberto Lombardo</h1>
             <p>Auteur | Comédien | Animateur</p>
 
-            <a href="#about" class="scroll-bas">Cliquez pour descendre</a>
+            <a href="#about" class="scroll-bas">
+            <img src="<?php echo get_template_directory_uri(); ?>/dist/images/btn_fleche.svg ">
+            </a>
         </div>  
     </section>
 <?php
