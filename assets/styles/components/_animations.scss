@@ -1,0 +1,42 @@
+/* pour l'animation d'accueil */
+#animation{
+    border:0px solid red;
+    height: 3259px;
+    background:transparent  url("../images/main_anim_color.svg") no-repeat center;
+}
+
+#anim_color,
+#los_small,
+#los_medium,
+#los_large{
+    height: 3259px;
+}
+
+#los_small{
+    background:transparent url("../images/main_anim_small_los.svg") no-repeat center;
+    position: absolute;
+    width: 100%;
+    z-index: 28;
+}
+
+#los_medium{
+    background:transparent url("../images/main_anim_medium_los.svg") no-repeat center;
+    position: absolute;
+    width: 100%;
+    z-index: 27;
+}
+
+#los_large{
+    background:transparent url("../images/main_anim_large_los.svg") no-repeat center;
+    position: absolute;
+    width: 100%;
+    z-index: 29;
+
+}
+
+#anim_color{ 
+    width: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 24;
+}

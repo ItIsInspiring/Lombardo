@@ -56,22 +56,13 @@
     // Home page
     'home': {
       init: function() {
-        // JavaScript to be fired on the home page
-        var $container = $('.portfolioContainer');
-        $container.isotope({
-            filter: '*',
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            }
-        });
-
+        var $container = $('.portfolioContainer');  
+        // JavaScript to be fired on the home page        
         $('.portfolioFilter a').click(function(){
             $('.portfolioFilter .active').removeClass('active');
             $(this).addClass('active');
-
             var selector = $(this).attr('data-filter');
+            //prompt(selector);
             $container.isotope({
                 filter: selector,
                 animationOptions: {

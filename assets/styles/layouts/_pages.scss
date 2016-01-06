@@ -56,6 +56,8 @@
 #intro{
     width:100vw;
     height:93vh;
+    background: transparent url("../images/logo_intro.svg") no-repeat center;
+    background-size:1000px;
 }
 
 .top-bar-section {
@@ -423,6 +425,7 @@ textarea:focus {
 .related-projects{
     background: url("../images/lozange_ocre_fonce.svg") repeat-x;
     background-position: top center;
+    padding-bottom: 2rem;
     
     h3{
         font-size: rem-calc(54);

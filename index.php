@@ -1,9 +1,17 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
 <section id="animation" class="show-for-medium-up">
-    <div class="row">
-        
-    </div>
+   
+   <div id="los_small"></div>
+   <div id="los_medium"></div>
+   <div id="los_large"></div>
+   
+   <div id="image1"></div>
+   <div id="image2"></div>
+   <div id="image3"></div>
+   
+   <div id="anim_color"></div>
+   
 </section>
 
 <div class="section-content-haut"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco.svg"></div>
@@ -87,7 +95,7 @@
             echo "</ul>"; 
         ?>    
             
-        <div class="portfolioContainer row-galery grid">
+        <div class="portfolioContainer">
 
                 <?php 
                 $args = array(

@@ -8,7 +8,8 @@
   "private": true,
   "dependencies": {
     "modernizr": "2.8.2",
-    "foundation": "~5.5.2"
+    "foundation": "~5.5.2",
+    "scrollmagic": "~2.0.5"
   },
   "overrides": {
     "modernizr": {
@@ -16,14 +17,9 @@
     },
     "foundation": {
       "main": [
-
         "./scss/normalize.scss",
         "./scss/foundation.scss",
-
-
         "../fastclick/lib/fastclick.js",
-
-    
         "./js/foundation/foundation.js",
         "./js/foundation/foundation.abide.js",
         "./js/foundation/foundation.accordion.js",
@@ -41,7 +37,6 @@
         "./js/foundation/foundation.tab.js",
         "./js/foundation/foundation.tooltip.js",
         "./js/foundation/foundation.topbar.js"
-
       ]
     }
   }
