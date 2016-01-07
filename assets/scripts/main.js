@@ -46,6 +46,10 @@
           }
         }
       });
+          
+          //
+          $('#animation').enllax(); 
+          $('#wrapper_images').enllax(); 
         
 
       },
@@ -56,6 +60,8 @@
     // Home page
     'home': {
       init: function() {
+        
+        // gallery  
         var $container = $('.portfolioContainer');  
         // JavaScript to be fired on the home page        
         $('.portfolioFilter a').click(function(){
@@ -73,6 +79,10 @@
              });
              return false;
         }); 
+        //
+          
+                  
+          
           
       },
       finalize: function() {

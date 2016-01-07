@@ -40,3 +40,39 @@
     width: 100%;
     z-index: 24;
 }
+
+#wrapper_images{
+    width:940px;
+    margin: 0 auto;
+}
+
+#image1,
+#image2,
+#image3{
+    width:345px;
+    height:515px;
+}
+
+#image1{
+    position:relative;
+    top: 604px;
+    left: -45px;
+    z-index:35; 
+    background:transparent url("../images/image1.png") no-repeat center;
+
+}
+#image2{
+    position:relative;
+    top: 475px;
+    left: 554px;
+    z-index:36;
+    background:transparent url("../images/image2.png") no-repeat center;
+}
+#image3{
+    position:relative;
+    top: 728px;
+    left: 210px;
+    z-index:37;
+    background:transparent url("../images/image3.png") no-repeat center;
+
+}

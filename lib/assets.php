@@ -77,6 +77,7 @@ function assets() {
     
     if(is_home()){
        wp_enqueue_script('isotope', asset_path('scripts/isotope.pkgd.min.js'), ['jquery'], null, true); 
+       wp_enqueue_script('parallax', asset_path('scripts/jquery.enllax.min.js'), [ ], null, true); 
     }
     
 }
