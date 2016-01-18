@@ -2,9 +2,9 @@
 
 <section id="animation" class="show-for-medium-up">
    
-   <div id="los_small" data-enllax-ratio="0.65"></div>
-   <div id="los_medium" data-enllax-ratio="0.85"></div>
-   <div id="los_large" data-enllax-ratio="0.95"></div>
+   <div id="los_small" data-enllax-ratio="0.95"></div>
+   <div id="los_medium" data-enllax-ratio="0.80"></div>
+   <div id="los_large" data-enllax-ratio="0.55"></div>
    
    <div id="wrapper_images">
        <div id="image1"></div>
@@ -14,18 +14,6 @@
    
    <div id="anim_color"></div>
    
-   <script>
-    // init controller
-    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
-
-    // build scenes
-    new ScrollMagic.Scene({triggerElement: "#animation"})
-                    .setTween("#los_small", {y: "80%", ease: Linear.easeNone})
-                    .addIndicators()
-                    .addTo(controller);
-        
-        //  
-    </script>
 </section>
 
 <div class="section-content-haut"><img src="<?php echo get_template_directory_uri(); ?>/dist/images/bg-bloc-deco.svg"></div>
